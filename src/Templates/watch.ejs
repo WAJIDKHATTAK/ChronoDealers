@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Watch</title>
+</head>
+<body>
+    <h1>Upload Watch Information</h1>
+    <form action="/watch/post_watch/dealerId/64f75fa7609b6926cd948018" method="POST" enctype="multipart/form-data">
+        <label for="brandName">Brand Name:</label>
+        <input type="text" id="brandName" name="brandName" required><br><br>
+
+        <label for="dialColor">Dial Color:</label>
+        <input type="text" id="dialColor" name="dialColor" required><br><br>
+
+        <label for="caseMaterial">Case Material:</label>
+        <input type="text" id="caseMaterial" name="caseMaterial" required><br><br>
+
+        <label for="braceletMaterial">Bracelet Material:</label>
+        <input type="text" id="braceletMaterial" name="braceletMaterial" required><br><br>
+
+        <label for="caseDiameter">Case Diameter:</label>
+        <input type="number" id="caseDiameter" name="caseDiameter" required><br><br>
+
+        <label for="yearOfProduction">Year of Production:</label>
+        <input type="number" id="yearOfProduction" name="yearOfProduction" required><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="crystal">Crystal:</label>
+        <input type="text" id="crystal" name="crystal" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+        <label for="images">Images:</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple required><br><br>
+
+        <label for="document">Document:</label>
+        <input type="file" id="document" name="document" accept=".pdf, .doc, .docx" required><br><br>
+
+        <button type="submit">Upload Watch</button>
+    </form>
+</body>
+</html>
