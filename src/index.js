@@ -5,11 +5,16 @@ const app = require("./app");
 const config = require("./Config/config");
 const logger = require("./Config/logger");
 const port = config.port || 5000;
+const http = require("http");
+const socketServer = require("./socket");
 //TODO Connect To MongoDB
 let server;
 mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
 	logger.info("Connected to MongoDB");
-	server = app.listen(port, () => {
+	server = http.createServer(app);
+	socketServer.init(server);
+
+	server.listen(port, () => {
 		logger.info(`Listening to port ${port}`);
 	});
 });
